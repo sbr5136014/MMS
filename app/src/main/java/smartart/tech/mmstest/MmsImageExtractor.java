@@ -88,7 +88,7 @@ public class MmsImageExtractor {
     /**
      * Extract parts from a specific MMS message
      */
-    private void extractMmsParts(String mmsId, OnImageFoundListener listener) {
+    void extractMmsParts(String mmsId, OnImageFoundListener listener) {
         Cursor partCursor = contentResolver.query(
                 Uri.parse("content://mms/part"),
                 new String[]{"_id", "ct", "_data", "text", "name", "filename"},
